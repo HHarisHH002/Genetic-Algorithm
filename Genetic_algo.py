@@ -112,7 +112,8 @@ for interations in range(500):
         
 
         # MUTATION
-        mutation_bit=random.randint(1,2**no_of_allele-1)
+        mutation_bit = random.randint(
+            0, no_of_allele*no_of_genes_per_chromosomes-1)
 
         if(total_crossover[mutation_bit]=='1'):
             total_crossover=total_crossover[:mutation_bit]+'0'+total_crossover[mutation_bit+1:]
